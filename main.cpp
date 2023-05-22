@@ -14,12 +14,17 @@ int main() {
     std::mt19937 mt(rd());
     std::uniform_real_distribution<double> dist(1.0, 100.0);
 
-
     for (unsigned int i = 0; i < a.size(); i++)
         a[i] = dist(mt);
 
     cout << "Zawartosc a: " << endl;
     cout << a << endl;
+
+    int min, max;
+    a.findMinAndMax(min, max);
+
+    cout << "Min: " << min << ", max: " << max << endl;
+
 
     return 0;
 }

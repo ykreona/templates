@@ -9,7 +9,6 @@ using namespace std;
 
 
 template <typename T> class Array{
-    //class Array {
     public:
         Array(int size) {
             if(size < 1)
@@ -66,7 +65,18 @@ template <typename T> class Array{
             return m_size;
         }
 
-        friend ostream& operator<<(ostream &s, Array &a) {
+    void findMinAndMax(int &min, int &max) { //pass by value
+        max = m_array[0];
+        for (int i = 0; i < m_size; i++){
+            if (m_array[i] > max) { max = m_array[i]; }
+        }
+        min = m_array[0];
+        for (int i = 0; i < m_size; i++){
+            if (m_array[i] < min) { min = m_array[i]; }
+        }
+    }
+
+    friend ostream& operator<<(ostream &s, Array &a) {
             for(int i = 0; i < a.m_size; ++i)
                 s << a[i] << endl;
 
