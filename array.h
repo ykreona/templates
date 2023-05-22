@@ -65,6 +65,17 @@ template <typename T> class Array{
             return m_size;
         }
 
+    void sort() {
+        for(int i = 0; i < m_size; i++) {
+            for(int j = 0; j < m_size; j++){
+                if(m_array[j] > m_array[j+1])
+                    std::swap (m_array[j], m_array[j+1]);
+            }
+        }
+
+    }
+
+
     void findMinAndMax(int &min, int &max) { //pass by value
         max = m_array[0];
         for (int i = 0; i < m_size; i++){

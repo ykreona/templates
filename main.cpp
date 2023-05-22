@@ -25,6 +25,11 @@ int main() {
 
     cout << "Min: " << min << ", max: " << max << endl;
 
+    a.sort();
+
+    cout << "Zawartosc a po posortowaniu: " << endl;
+    cout << a << endl;
+
 
     return 0;
 }
